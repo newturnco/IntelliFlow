@@ -1,0 +1,19 @@
+{
+  "name": "intelliflow-mobile",
+  "version": "1.0.0",
+  "main": "expo-router/entry",
+  "dependencies": {
+    "expo": "~51.0.0",
+    "expo-router": "~3.5.0",
+    "react": "18.2.0",
+    "react-native": "0.74.0",
+    "@intelliflow/crm-mobile-sdk": "file:../mobile-sdk",
+    "expo-secure-store": "~13.0.0",
+    "expo-speech": "~12.0.0",
+    "@react-navigation/native": "^6.1.0",
+    "nativewind": "^2.0.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  }
+}

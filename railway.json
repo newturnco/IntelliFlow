@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd backend && pip install -r requirements.txt && cd ../frontend && npm ci && npm run build",
+  "startCommand": "concurrently \"cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT\" \"cd frontend && npm start\"",
+  "envVars": ["DATABASE_URL", "REDIS_URL", "OPENAI_API_KEY", "STORAGE_PROVIDER", "AZURE_STORAGE_ACCOUNT_NAME"]
+}
