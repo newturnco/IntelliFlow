@@ -1,3 +1,4 @@
+cat > frontend/Dockerfile << 'EOF'
 FROM node:20-alpine AS builder
 WORKDIR /app
 COPY frontend/package*.json ./
@@ -12,3 +13,4 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/package*.json ./
 RUN npm ci --production
 CMD ["npm", "start"]
+EOF

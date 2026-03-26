@@ -1,3 +1,4 @@
+cat > docker-compose.prod.yml << 'EOF'
 version: '3.9'
 
 services:
@@ -24,8 +25,8 @@ services:
 
   backend:
     build:
-      context: ./backend
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: backend/Dockerfile
     container_name: intelliflow-backend
     depends_on:
       postgres:
@@ -46,8 +47,8 @@ services:
 
   frontend:
     build:
-      context: ./frontend
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: frontend/Dockerfile
     container_name: intelliflow-frontend
     depends_on:
       - backend
@@ -72,3 +73,4 @@ services:
 volumes:
   postgres_data:
   redis_data:
+EOF
